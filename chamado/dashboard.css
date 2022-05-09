@@ -17,4 +17,17 @@ navbar {
 #card {
   margin-left: 10 px;
   margin-top: 20 px;
+  margin-right: 30px;
+  align-items: center;
+}
+
+#containerCards {
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-right: 5px;
+  align-items: center;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  display: flexbox;
 }

@@ -1,0 +1,10 @@
+adicionar mais cards ao lado. 
+	- acompanhar
+	- cadastrar equipamento
+
+Dashboard
+	- alert com finalização de chamado
+	- Produtos e Peças no chamado
+
+Nos produtos utilizados:
+	- Colocar de onde vem o produto substituto em caso de empréstimo.
