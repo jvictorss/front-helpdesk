@@ -61,7 +61,7 @@
               </div>
           <div class="col-md-5">
             <label for="descricaoEquipamento" class="form-label">Descrição do Equipamento</label>
-            <input type="text" class="form-control" id="inputDescricao">
+            <input type="text" class="form-control" id="inputDescricao" placeholder="Ex.: Notebook 8gb AMD Ryzen">
           </div>
           <div class="col-md-3">
             <label for="inputProblema" class="form-label">Tipo Equipamento</label>
@@ -75,23 +75,26 @@
               <option>Mouse</option>
             </select>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <label for="marcaEquipamento" class="form-label">Marca</label>
-            <input type="text" class="form-control" id="inputMarca">
+            <input type="text" class="form-control" id="inputMarca" placeholder="Ex.: Lenovo">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <label for="modeloEquipamento" class="form-label">Modelo</label>
-            <input type="text" class="form-control" id="inputModelo">
+            <input type="text" class="form-control" id="inputModelo" placeholder="Ex.: Ideapad S145">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-12">
             <label for="inputObservacao" class="form-label">Observação</label>
-            <input type="text" class="form-control" id="inputObservacao">
+            <textarea class="form-control" id="inputObservacao"></textarea>
           </div>
           <div class="col-12" id="botoesChamado">
-            <button type="submit" class="btn btn-primary">Cadastrar Equipamento</button>
-            <button type="submit" class="btn btn-secondary">Cancelar</button>
+            <button type="submit" id="botaoChamado" class="btn btn-primary">Cadastrar Equipamento</button>
+            <button type="reset" class="btn btn-secondary">Cancelar</button>
           </div>
         </form>
       </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 </html>

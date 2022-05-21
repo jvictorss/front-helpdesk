@@ -8,7 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="/chamado/dashboard.css" rel="stylesheet" id="stylesheet">
-  <title>Help Desk</title>
+  <link href="/chamado/chamado.css" rel="stylesheet" id="stylesheet">
+  <title>Consultar Chamado</title>
 </head>
 
 <body>
@@ -53,4 +54,68 @@
       </div>
     </div>
   </nav>
+  <div id="formConsulta" class="container_card container2">
+    <form class="row">
+      <h3 style="position: center;">Acompanhar chamado</h3>
+      <div class="col-md-3">
+        <label for="consultaProtocolo" class="form-label">Protocolo do chamado</label>
+        <input type="text" required class="form-control" id="inputSecretaria">
+      </div>
+      <div class="col-3" id="botoesConsulta">
+        <br/>
+        <button type="submit" id="botaoChamado" class="btn btn-primary">Consultar</button>
+        <button type="reset" class="btn btn-secondary">Cancelar</button>
+      </div>
+      <div class="col-md-3">
+        <label for="secretariaExecutiva" class="form-label">Patrimônio do Equipamento</label>
+        <input type="text" readonly class="form-control" id="inputEndereco">
+      </div>
+      <div class="col-md-3">
+        <label for="endereco" class="form-label">Descrição do Equipamento</label>
+        <input type="datetime" readonly class="form-control" id="diretoria">
+      </div>
+      <div class="col-md-3">
+        <label for="setor" class="form-label">Data de abertura</label>
+        <input type="text" readonly class="form-control" id="diretoria">
+      </div>
+      <div class="col-md-4">
+        <label for="patrimonio" class="form-label">Patrimônio</label>
+        <input type="text" readonly class="form-control" id="diretoria" placeholder="Placa do patrimônio">
+      </div>
+      <div class="col-4">
+        <label for="inputServidor" class="form-label">Servidor</label>
+        <input type="text" readonly class="form-control" id="inputServidor" placeholder="Nome do Servidor">
+      </div>
+      <div class="col-3">
+        <label for="inputContato" class="form-label">Contato</label>
+        <input type="tel" readonly class="form-control" id="inputTelefone" placeholder="(087)999-999-999">
+      </div>
+      <div class="col-5">
+        <label for="inputEmail" class="form-label">E-mail</label>
+        <input type="email" readonly class="form-control" id="inputEmail"
+          placeholder="secretaria@serratalhada.pe.gov.br">
+      </div>
+      <div class="col-md-3">
+        <label for="inputEquipamento" class="form-label">Descrição do Equipamento</label>
+        <input type="text" readonly class="form-control" id="inputEquipamento">
+      </div>
+      <div class="col-md-3">
+        <label for="inputProblema" class="form-label">Problema</label>
+        <input type="text" class="form-control" id="inputProblema"
+        readonly>
+      </div>
+      <div class="col-md-6">
+        <label for="inputZip" class="form-label">Descrição do problema</label>
+        <input type="text" class="form-control" id="inputDescProblema"
+        readonly>
+      </div>
+  
+      
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
 </html>

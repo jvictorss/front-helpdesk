@@ -34,7 +34,7 @@
                 Cadastros
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Equipamento</a></li>
+                <li><a class="dropdown-item" href="/chamado/equipamento.html">Equipamento</a></li>
                 <li><a class="dropdown-item" href="/chamado/usuarios.html">Usuários</a></li>
                 <li><a class="dropdown-item" href="/chamado/produtosPecas.html">Produtos/Peças</a></li>
                 <!-- <li><hr class="dropdown-divider"></li> -->
@@ -65,25 +65,28 @@
           </div>
           <div class="col-md-4">
             <label for="cargoOuFuncao" class="form-label">Cargo ou função</label>
-            <input type="text" required class="form-control" id="cargoOuFuncao">
+            <input type="text" required class="form-control" id="cargoOuFuncao" placeholder="Ex.: Analista de Sistemas">
           </div>
           <div class="col-md-4">
             <label for="lotacao" class="form-label">Lotação</label>
-            <input type="text" required class="form-control" id="lotacao">
+            <input type="text" required class="form-control" id="lotacao" placeholder="Ex.: Núcleo de Tecnologia da Informação">
           </div>
           <div class="col-md-4">
             <label for="inputDiretoria" class="form-label">Diretoria</label>
-            <input type="text" required class="form-control" id="inputDiretoria">
+            <input type="text" required class="form-control" id="inputDiretoria" placeholder="Ex.: Diretoria de TI">
           </div>
           <div class="col-md-4">
             <label for="inputSecretaria" class="form-label">Secretaria</label>
-            <input type="text" required class="form-control" id="inputSecretaria">
+            <input type="text" required class="form-control" id="inputSecretaria" placeholder="Ex.: Secretaria de Planejamento">
           </div>
           <div class="col-12" id="botoesChamado">
-            <button type="submit" class="btn btn-primary">Cadastrar Servidor</button>
+            <button type="submit" id="botaoChamado" class="btn btn-primary">Cadastrar Servidor</button>
             <button type="submit" class="btn btn-secondary">Cancelar</button>
           </div>
         </form>
       </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 </html>

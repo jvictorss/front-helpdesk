@@ -56,15 +56,20 @@
     <div id="formChamado" class="container_card container2">
       <form class="row">
         <h3 style="position: center;"> Novo chamado </h3>
-        <div class="col-md-6">
-          <label for="nomeSecretaria" class="form-label">Secretaria/Secretaria Executiva</label>
-          <input type="text" readonly class="form-control" id="inputSecretaria">
+        <div class="col-4">
+          <label for="inputServidor" class="form-label">Servidor</label>
+          <input type="text" required class="form-control" id="inputServidor" placeholder="Nome do Servidor">
         </div>
-        <div class="col-md-6">
-          <label for="secretariaExecutiva" class="form-label">Endereço</label>
-          <input type="text" readonly class="form-control" id="inputEndereco">
+        <div class="col-3">
+          <label for="inputContato" class="form-label">Contato</label>
+          <input type="tel" required class="form-control" id="inputTelefone" placeholder="(087)99999-9999">
         </div>
-        <div class="col-md-4">
+        <div class="col-5">
+          <label for="inputEmail" class="form-label">E-mail</label>
+          <input type="email" required class="form-control" id="inputEmail"
+            placeholder="secretaria@serratalhada.pe.gov.br">
+        </div>
+        <!-- <div class="col-md-4">
           <label for="endereco" class="form-label">Diretoria/Escola/UBS</label>
           <input type="text" required class="form-control" id="diretoria"
             placeholder="Insira sua diretoria, escola ou UBS">
@@ -73,29 +78,17 @@
           <label for="setor" class="form-label">Setor</label>
           <input type="text" required class="form-control" id="diretoria"
             placeholder="Setor dentro da diretoria, escola ou UBS">
-        </div>
-        <div class="col-md-4">
+        </div> -->
+        <div class="col-md-3">
           <label for="patrimonio" class="form-label">Patrimônio</label>
           <input type="text" required class="form-control" id="diretoria" placeholder="Placa do patrimônio">
         </div>
-        <div class="col-4">
-          <label for="inputServidor" class="form-label">Servidor</label>
-          <input type="text" required class="form-control" id="inputServidor" placeholder="Nome do Servidor">
-        </div>
-        <div class="col-3">
-          <label for="inputContato" class="form-label">Contato</label>
-          <input type="tel" required class="form-control" id="inputTelefone" placeholder="(087)999-999-999">
-        </div>
-        <div class="col-5">
-          <label for="inputEmail" class="form-label">E-mail</label>
-          <input type="email" required class="form-control" id="inputEmail"
-            placeholder="secretaria@serratalhada.pe.gov.br">
-        </div>
-        <div class="col-md-3">
+        
+        <div class="col-md-4">
           <label for="inputEquipamento" class="form-label">Descrição do Equipamento</label>
           <input type="text" readonly class="form-control" id="inputEquipamento">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-5">
           <label for="inputProblema" class="form-label">Problema</label>
           <select id="inputProblema" class="form-select">
             <option selected></option>
@@ -103,18 +96,18 @@
             <option>Sem conexão à internet</option>
             <option>Sem conexão à impressora</option>
             <option>Desligando constantemente</option>
-            <option>Outros (detalhar abaixo)</option>
+            <option>Outros (detalhar)</option>
           </select>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
           <label for="inputZip" class="form-label">Descrição do problema</label>
-          <input type="text" class="form-control" id="inputDescProblema"
-            placeholder="Descreva aqui em poucas palavras o problema">
+          <textarea class="form-control" id="inputDescProblema" rows="6" cols="12"
+            placeholder="Descreva aqui em poucas palavras o problema"></textarea>
         </div>
     
         <div class="col-12" id="botoesChamado">
-          <button type="submit" class="btn btn-primary">Abrir chamado</button>
-          <button type="submit" class="btn btn-secondary">Cancelar</button>
+          <button type="submit" id="botaoChamado" class="btn btn-primary">Abrir chamado</button>
+          <button type="reset" class="btn btn-secondary">Cancelar</button>
         </div>
       </form>
     </div>

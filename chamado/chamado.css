@@ -13,6 +13,20 @@
   margin: auto;
 }
 
+.formConsulta {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin: auto;
+}
+
+.formConsulta h3 {
+  width: 400px;
+}
+
 #botoesChamado {
   display: flex;
   justify-content: right;
@@ -20,9 +34,14 @@
   margin-right: 2px;
 }
 
+#botoesConsulta {
+  height: fit-content;
+
+}
+
 .container2 {
   width: 80%;
-  height: 400px;
+  height: auto;
   margin: 0 auto;
   margin-top: 15px;
 }
@@ -51,4 +70,12 @@ body {
   margin-right: 150px;
   margin: auto;
   height: 100px;
+}
+
+#consultaProtocolo {
+  padding-left: 800px;
+}
+
+#botaoChamado {
+  margin-right: 5px;
 }

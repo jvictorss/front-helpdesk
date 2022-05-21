@@ -1,0 +1,261 @@
+# João Victor da Silva Santos e Marcos Fabrício Bezerra Severo
+import json
+from os.path import exists as existeArquivo
+
+basePaciente = ""
+"""
+baseConsulta = {}
+baseMedico = {}
+baseFuncionario = {}
+baseClinica = {}
+"""
+
+# basePaciente.json
+paciente = {"cpf": "", "nome": "", "email": "", "telefone": "", "endereco": ""}
+
+
+def cadastrarPaciente():
+    """
+    -> Efetua o cadastro de cliente, caso ele ainda não tenha sido cadastrado.
+    :return: Caso o CPF já tenha sido cadastrado, será exibido.
+    """
+    basePaciente = existeArquivo("basePaciente.json")
+    if basePaciente is False:
+        print("{:^60}".format("O arquivo base de cadastro de Pacientes ainda não existe!"))
+        print("{:>50}".format(">>>  CRIANDO  >>>"))
+        basePaciente = open("basePaciente.json", "w")
+    else:
+        basePaciente = open("basePaciente.json", "a+")
+        cpf = input("Digite o CPF do paciente: ")
+        while verificaCPFpaciente(cpf):
+            if cpf in paciente.get("cpf"):
+                print("O CPF {} já está cadastrado para {}.".format(cpf, paciente.get("nome")))
+                break
+            else:
+                paciente["cpf"] = cpf
+                nome = input("Nome: ")
+                email = input("E-mail: ")
+                telefone = input("Telefone / Celular: ")
+                endereco = input("Endereço: ")
+                paciente["nome"] = nome
+                paciente["email"] = email
+                paciente["telefone"] = telefone
+                paciente["endereco"] = endereco
+                print(
+                    "Paciente \"{}\", CPF nº \"{}\" Cadastrado com sucesso!".format(paciente["nome"], paciente["cpf"]))
+                json.dump(paciente, basePaciente, indent=4)
+                continua = int(input("\tDeseja continuar? [1] Sim   [2] Não: "))
+                if continua != 1:
+                    print("{:-^60}".format(" Voltando para o Menu de Paciente "))
+                    break
+            basePaciente.close()
+
+
+def verificaCPFpaciente(cpf):
+    with open('basePaciente.json', 'r') as buscaJson:
+        buscaPaciente = json.load(buscaJson)
+        print("passou aqui")
+    if buscaPaciente["cpf"] == cpf:
+        print(
+            f"Já existe um paciente cadastrado com o CPF nº {cpf}")
+        print("{:-^60}".format(" Voltando para o Menu de Paciente. "))
+        return False
+    else:
+        print("{:-^60}".format(" Voltando para o Menu de Paciente. "))
+        return True
+
+
+def buscarPacienteCpf():
+    return None
+     # with open('basePaciente.json', 'r') as buscaJson:
+    #     buscaPaciente = json.load(buscaJson)
+    # buscaCPF = input("Digite o CPF: ")
+    # while True:
+    #     if buscaPaciente["cpf"] == buscaCPF:
+    #         print(f"Eis o que encontramos para o CPF {buscaCPF}: ")
+    #         print(f"Nome: {buscaPaciente['nome']}")
+    #         print(f"E-mail: {buscaPaciente['email']}")
+    #         print(f"Telefone: {buscaPaciente['telefone']}")
+    #         print(f"Endereço: {buscaPaciente['endereco']}")
+    #         print("{:-^60}".format(" Voltando para o Menu de Paciente. "))
+    #     else:
+    #         print("Não existe paciente cadastrado com este CPF.")
+    #     break
+
+
+
+def editarPaciente():
+    return None
+     # with open('basePaciente.json', 'r') as buscaJson:
+    #     buscaPaciente = json.load(buscaJson)
+    # buscaCPF = input("Digite o CPF para edição: ")
+    # while True:
+    #     if buscaPaciente["cpf"] == buscaCPF:
+    #         print(f"Eis o que encontramos para o CPF {buscaCPF}: ")
+    #         print(f"Nome: {buscaPaciente['nome']}")
+    #         print(f"E-mail: {buscaPaciente['email']}")
+    #         print(f"Telefone: {buscaPaciente['telefone']}")
+    #         print(f"Endereço: {buscaPaciente['endereco']}")
+    #         novoNome = input("Novo Nome: ")
+    #         novoEmail = input("Novo E-mail: ")
+    #         novoTelefone = input("Novo Telefone / Celular: ")
+    #         novoEndereco = input("Novo Endereço: ")
+    #         paciente["nome"] = novoNome
+    #         paciente["email"] = novoEmail
+    #         paciente["telefone"] = novoTelefone
+    #         paciente["endereco"] = novoEndereco
+    #         print("{:-^60}".format(" Voltando para o Menu de Paciente. "))
+    #     else:
+    #         print("Não existe paciente cadastrado com este CPF.")
+    #     break
+
+
+def removerPaciente():
+    return None
+
+
+def listarTodosPacientes():
+    lendo = open("basePaciente.json", "r")
+    linhaTodos = lendo.readline()
+    while linhaTodos != "":
+        print(linhaTodos)
+        linhaTodos = lendo.readline()
+    lendo.close()
+
+
+# baseConsulta.json
+Consulta = {"codigo": "", "paciente": "", "medico": "", "data": "", "hora": "", "retorno": "", "obs": ""}
+
+
+def marcarConsulta():
+    return None
+
+
+def buscarConsultaPaciente():
+    return None
+
+
+def editarConsulta():
+    return None
+
+
+def removerConsulta():
+    return None
+
+
+def listarConsultas():
+    return None
+
+
+def listarConsultaRetorno():
+    return None
+
+
+def listarConsultaIntervData():
+    return None
+
+
+# baseMedico.json
+Medico = {"crm": "", "nome": "", "email": "", "especialidade": "", "clinica": ""}
+
+
+def cadastrarMedico():
+    baseMedico = existeArquivo("baseMedico.json")
+    if baseMedico is False:
+        print("{:^60}".format("O arquivo base de cadastro de Médicos ainda não existe!"))
+        print("{:>50}".format(">>>  CRIANDO  >>>"))
+        baseMedico = open("baseMedico.json", "w")
+    else:
+        baseMedico = open("baseMedico.json", "a+")
+        crm = input("Digite o CRM do medico: ")
+        verificaCPFpaciente(crm)
+        while True:
+            if crm in Medico.get("crm"):
+                print("O CRM {} já está cadastrado para {}.".format(crm, Medico.get("nome")))
+                break
+            else:
+                Medico["crm"] = crm
+                nome = input("Nome: ")
+                email = input("E-mail: ")
+                especialidade = input("Especialidade: ")
+                clinica = input("Clínica: ")
+                Medico["nome"] = nome
+                Medico["email"] = email
+                Medico["especialidade"] = especialidade
+                Medico["clinica"] = clinica
+                print("Médico \"{}\", CRM nº \"{}\" Cadastrado com sucesso!".format(Medico["nome"], Medico["crm"]))
+                json.dump(Medico, baseMedico, indent=4)
+                continua = int(input("\tDeseja continuar? [1] Sim   [2] Não: "))
+                if continua != 1:
+                    print("{:-^60}".format(" Voltando para o Menu. "))
+                    break
+            baseMedico.close()
+
+
+def buscarMedicoCRM():
+    return None
+
+
+def editarMedico():
+    return None
+
+
+def removerMedico():
+    return None
+
+
+def listarTodosMedicos():
+    return None
+
+
+def pesquisarMedicoEspecialidade():
+    return None
+
+
+# baseFuncionario.json
+Funcionario = {"matricula": "", "cpf": "", "nome": "", "email": "", "clinica": ""}
+
+
+def cadastrarFuncionario():
+    return None
+
+
+def buscarFuncionarioMatricula():
+    return None
+
+
+def editarFuncionario():
+    return None
+
+
+def removerFuncionario():
+    return None
+
+
+def listarTodosFuncionarios():
+    return None
+
+
+# baseClinica.json
+Clinica = {"cnpj": "", "nome": "", "endereco": ""}
+
+
+def cadastrarClinica():
+    return None
+
+
+def buscarClinicaCnpj():
+    return None
+
+
+def editarClinica():
+    return None
+
+
+def removerClinica():
+    return None
+
+
+def listarTodasClinicas():
+    return None
+ 

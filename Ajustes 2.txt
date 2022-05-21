@@ -1,0 +1,10 @@
+Cadastro de usuário já trazer os dados. O cadastro já será do subdepartamento ao invés da secretaria.
+	- Excluir dados desnecessários ao usuário como endereço e dados da secretaria. Isso é importante pra quem atenderá o chamado
+	- Descrição do Equipamento perto do Patrimônio.
+	- Diretoria/UBS/Escola vem pra quem atenderá o chamado.
+	- Botão ao lado do patrimônio pra cadastrar equipamento, caso não esteja cadastrado.
+
+	- Pegar a descrição do problema de uma tabela no BD. CRUD com Input pro ADM do sistema. Fazer o mesmo para o Tipo
+de Equipamento.
+
+	- Fazer um template pra header e footer e chamar em cada tela, ao invés de por em todas elas.
