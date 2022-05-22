@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="/chamado/chamado.css" rel="stylesheet" id="stylesheet">
-  <title>Cadastrar Equipamento</title>
+  <title>Cadastrar Usuário</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,10 +23,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/chamado/dashboard.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="/administrador/dashboard.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/chamado/chamado.html">Chamados</a>
+              <a class="nav-link" href="/administrador/chamado.html">Chamados</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -34,9 +34,8 @@
                 Cadastros
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/chamado/equipamento.html">Equipamento</a></li>
-                <li><a class="dropdown-item" href="/chamado/usuarios.html">Usuários</a></li>
-                <!-- <li><a class="dropdown-item" href="/chamado/produtosPecas.html">Produtos/Peças</a></li> -->
+                <li><a class="dropdown-item" href="/administrador/usuarios.html">Usuários</a></li>
+                <li><a class="dropdown-item" href="/administrador/produtosPecas.html">Produtos/Peças</a></li>
                 <!-- <li><hr class="dropdown-divider"></li> -->
                 <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
               </ul>
@@ -52,44 +51,36 @@
         </div>
       </div>
     </nav>
-    <div id="formEquipamento" class="container_card container2">
+    <div id="formUsuarios" class="container_card container2">
         <form class="row g-3">
-            <h3> Novo equipamento </h3>
-            <div class="col-md-4">
-                <label for="patrimonio" class="form-label">Patrimônio</label>
-                <input type="text" required class="form-control" id="diretoria" placeholder="Placa do patrimônio">
+            <h3>Novo Usuário</h3>
+            <div class="col-md-3">
+                <label for="matriculaOuCPF" class="form-label">Matrícula/CPF</label>
+                <input type="text" required class="form-control" id="diretoria" placeholder="Matrícula ou CPF do Servidor">
               </div>
           <div class="col-md-5">
-            <label for="descricaoEquipamento" class="form-label">Descrição do Equipamento</label>
-            <input type="text" class="form-control" id="inputDescricao" placeholder="Ex.: Notebook 8gb AMD Ryzen">
+            <label for="nomeCompleto" class="form-label">Nome Completo</label>
+            <input type="text" required class="form-control" id="nomeCompleto" placeholder="Nome completo do servidor">
           </div>
-          <div class="col-md-3">
-            <label for="inputProblema" class="form-label">Tipo Equipamento</label>
-            <select id="inputProblema" class="form-select">
-              <option selected></option>
-              <option>Computador de mesa</option>
-              <option>Notebook</option>
-              <option>Impressora</option>
-              <option>Monitor</option>
-              <option>Teclado</option>
-              <option>Mouse</option>
-            </select>
+          <div class="col-md-4">
+            <label for="cargoOuFuncao" class="form-label">Cargo ou função</label>
+            <input type="text" required class="form-control" id="cargoOuFuncao" placeholder="Ex.: Analista de Sistemas">
           </div>
-          <div class="col-md-6">
-            <label for="marcaEquipamento" class="form-label">Marca</label>
-            <input type="text" class="form-control" id="inputMarca" placeholder="Ex.: Lenovo">
+          <div class="col-md-4">
+            <label for="lotacao" class="form-label">Lotação</label>
+            <input type="text" required class="form-control" id="lotacao" placeholder="Ex.: Núcleo de Tecnologia da Informação">
           </div>
-          <div class="col-md-6">
-            <label for="modeloEquipamento" class="form-label">Modelo</label>
-            <input type="text" class="form-control" id="inputModelo" placeholder="Ex.: Ideapad S145">
+          <div class="col-md-4">
+            <label for="inputDiretoria" class="form-label">Diretoria</label>
+            <input type="text" required class="form-control" id="inputDiretoria" placeholder="Ex.: Diretoria de TI">
           </div>
-          <div class="col-md-12">
-            <label for="inputObservacao" class="form-label">Observação</label>
-            <textarea class="form-control" id="inputObservacao"></textarea>
+          <div class="col-md-4">
+            <label for="inputSecretaria" class="form-label">Secretaria</label>
+            <input type="text" required class="form-control" id="inputSecretaria" placeholder="Ex.: Secretaria de Planejamento">
           </div>
           <div class="col-12" id="botoesChamado">
-            <button type="submit" id="botaoChamado" class="btn btn-primary">Cadastrar Equipamento</button>
-            <button type="reset" class="btn btn-secondary">Cancelar</button>
+            <button type="submit" id="botaoChamado" class="btn btn-primary">Cadastrar Servidor</button>
+            <button type="submit" class="btn btn-secondary">Cancelar</button>
           </div>
         </form>
       </div>

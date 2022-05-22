@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="/chamado/chamado.css" rel="stylesheet" id="stylesheet">
-  <title>Novo chamado</title>
+  <title>Nova Ordem de Serviço</title>
 </head>
 
 <body>
@@ -24,10 +24,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/chamado/dashboard.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="/administrador/dashboard.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Chamados</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">OS</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -35,9 +35,8 @@
               Cadastros
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/chamado/equipamento.html">Equipamento</a></li>
-              <li><a class="dropdown-item" href="/chamado/usuarios.html">Usuários</a></li>
-              <!-- <li><a class="dropdown-item" href="/chamado/produtosPecas.html">Produtos/Peças</a></li> -->
+              <li><a class="dropdown-item" href="/administrador/usuarios.html">Usuários</a></li>
+              <li><a class="dropdown-item" href="/administrador/produtosPecas.html">Produtos/Peças</a></li>
               <!-- <li><hr class="dropdown-divider"></li> -->
               <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
             </ul>
@@ -55,19 +54,21 @@
   </nav>
     <div id="formChamado" class="container_card container2">
       <form class="row">
-        <h3 style="position: center;"> Novo chamado </h3>
+        <h3 style="position: center;"> Ordem de Serviço NTI005 </h3>
         <div class="col-4">
-          <label for="inputServidor" class="form-label">Servidor</label>
-          <input type="text" required class="form-control" id="inputServidor" placeholder="Nome do Servidor">
+          <label for="inputServidor" class="form-label">Técnico designado</label>
+          <select id="inputProblema" class="form-select">
+            <option readonly selected>Marcílio</option>
+          </select>
         </div>
         <div class="col-3">
-          <label for="inputContato" class="form-label">Contato</label>
-          <input type="tel" required class="form-control" id="inputTelefone" placeholder="(087)99999-9999">
+          <label for="inputContato" class="form-label">Contato do servidor do chamado</label>
+          <input type="tel" readonly class="form-control" id="inputTelefone" placeholder="(87)98859-8165">
         </div>
         <div class="col-5">
           <label for="inputEmail" class="form-label">E-mail</label>
           <input type="email" required class="form-control" id="inputEmail"
-            placeholder="secretaria@serratalhada.pe.gov.br">
+            readonly placeholder="joaovss1992@gmail.com">
         </div>
         <!-- <div class="col-md-4">
           <label for="endereco" class="form-label">Diretoria/Escola/UBS</label>
@@ -81,32 +82,30 @@
         </div> -->
         <div class="col-md-3">
           <label for="patrimonio" class="form-label">Patrimônio</label>
-          <input type="text" required class="form-control" id="diretoria" placeholder="Placa do patrimônio">
+          <input type="text" readonly class="form-control" id="diretoria" placeholder="PMST008165">
         </div>
         
         <div class="col-md-4">
           <label for="inputEquipamento" class="form-label">Descrição do Equipamento</label>
-          <input type="text" readonly class="form-control" id="inputEquipamento">
+          <input type="text" readonly class="form-control" id="inputEquipamento" placeholder="Notebook Lenovo ideapad S145">
         </div>
         <div class="col-md-5">
           <label for="inputProblema" class="form-label">Problema</label>
-          <select id="inputProblema" class="form-select">
-            <option selected></option>
-            <option>Não liga</option>
-            <option>Sem conexão à internet</option>
-            <option>Sem conexão à impressora</option>
-            <option>Desligando constantemente</option>
-            <option>Outros (detalhar)</option>
-          </select>
+          <input type="text" readonly class="form-control" id="inputProblema" placeholder="Sem conexão à internet">
         </div>
         <div class="col-md-12">
           <label for="inputZip" class="form-label">Descrição do problema</label>
-          <textarea class="form-control" id="inputDescProblema" rows="6" cols="12"
-            placeholder="Descreva aqui em poucas palavras o problema"></textarea>
+          <textarea class="form-control" id="inputDescProblema" rows="3" cols="12"
+            readonly placeholder="Não consigo conectar à rede da PMST. Como é notebook, em casa consigo acessar, mas aqui não. A senha daqui está correta no pc também."></textarea>
+        </div>
+        <div class="col-md-12">
+          <label for="inputZip" class="form-label">Descrição da solução</label>
+          <textarea class="form-control" id="inputDescProblema" rows="3" cols="12"
+            placeholder="Resetei todas as conexões de rede e não resolveu. Desinstalei o drive de rede e instalei novamente. Dessa vez deu certo."></textarea>
         </div>
     
         <div class="col-12" id="botoesChamado">
-          <button type="submit" id="botaoChamado" class="btn btn-primary">Abrir chamado</button>
+          <button type="submit" id="botaoChamado" class="btn btn-primary">Fechar OS</button>
           <button type="reset" class="btn btn-secondary">Cancelar</button>
         </div>
       </form>
