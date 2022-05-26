@@ -99,13 +99,27 @@
             readonly placeholder="Não consigo conectar à rede da PMST. Como é notebook, em casa consigo acessar, mas aqui não. A senha daqui está correta no pc também."></textarea>
         </div>
         <div class="col-md-12">
-          <label for="inputZip" class="form-label">Descrição da solução</label>
+          <label for="conversaPrevia" class="form-label">Conversa prévia com servidor</label>
+          <textarea class="form-control" id="conversaPrevia" rows="3" cols="12" readonly
+            placeholder="Descreva aqui, se necessário, uma conversa anterior à abertura de chamado para entender melhor o problema."></textarea>
+        </div>
+        <div class="col-md-12">
+          <label for="inputZip" class="form-label">Possível Solução</label>
+          <textarea class="form-control" id="inputDescProblema" rows="3" cols="12" readonly
+            placeholder="Descreva aqui em poucas palavras uma possível resolução"></textarea>
+        </div>
+        <!-- HOME DASHBOARD para resumo para Ari-->
+        <!-- TODO: SELECT COM SOLUÇÃO PARA PUXAR O VALOR DO SERVIÇO OU TROCA DE PEÇAS OU AMBOS. -->
+        <!-- TODO: descrever solução e peças utilizadas. -->
+        <div class="col-md-12">
+          <label for="inputZip" class="form-label">Observação da ocorrência</label>
           <textarea class="form-control" id="inputDescProblema" rows="3" cols="12"
             placeholder="Resetei todas as conexões de rede e não resolveu. Desinstalei o drive de rede e instalei novamente. Dessa vez deu certo."></textarea>
         </div>
     
         <div class="col-12" id="botoesChamado">
           <button type="submit" id="botaoChamado" class="btn btn-primary">Fechar OS</button>
+          <button type="reset" class="btn btn-secondary">Falha na solução</button> <!-- modal para observação de devolução da OS-->
           <button type="reset" class="btn btn-secondary">Cancelar</button>
         </div>
       </form>

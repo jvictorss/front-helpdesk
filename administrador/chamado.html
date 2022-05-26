@@ -55,8 +55,18 @@
     <div id="formChamado" class="container_card container2">
       <form class="row">
         <h3 style="position: center;"> Nova Ordem de Serviço </h3>
-        <div class="col-4">
+        <div class="col-2">
           <label for="inputServidor" class="form-label">Técnico designado</label>
+          <select id="inputProblema" class="form-select">
+            <option selected></option>
+            <option>Marcílio</option>
+            <option>Lucas</option>
+            <option>Bruno</option>
+            <option>Matheus</option>
+          </select>
+        </div>
+        <div class="col-2">
+          <label for="inputServidor" class="form-label">Técnico apoio</label> <!-- MULTISELECT-->
           <select id="inputProblema" class="form-select">
             <option selected></option>
             <option>Marcílio</option>
@@ -99,13 +109,18 @@
         </div>
         <div class="col-md-12">
           <label for="inputZip" class="form-label">Descrição do problema</label>
-          <textarea class="form-control" id="inputDescProblema" rows="3" cols="12"
+          <textarea class="form-control" id="inputDescProblema" rows="3" cols="12" readonly
             placeholder="Descreva aqui em poucas palavras uma possível resolução"></textarea>
         </div>
         <div class="col-md-12">
           <label for="conversaPrevia" class="form-label">Conversa prévia com servidor</label>
           <textarea class="form-control" id="conversaPrevia" rows="3" cols="12"
             placeholder="Descreva aqui, se necessário, uma conversa anterior à abertura de chamado para entender melhor o problema."></textarea>
+        </div>
+        <div class="col-md-12">
+          <label for="inputZip" class="form-label">Possível Solução</label>
+          <textarea class="form-control" id="inputDescProblema" rows="3" cols="12"
+            placeholder="Descreva aqui em poucas palavras uma possível resolução"></textarea>
         </div>
         <div class="col-12" id="botoesChamado">
           <button type="submit" id="botaoChamado" class="btn btn-primary">Abrir chamado</button>
