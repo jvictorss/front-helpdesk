@@ -91,36 +91,57 @@
         </div>
         <div class="col-md-5">
           <label for="inputProblema" class="form-label">Problema</label>
-          <input type="text" readonly class="form-control" id="inputProblema" placeholder="Sem conexão à internet">
+          <input type="text" readonly class="form-control" id="inputProblema" placeholder="Não liga">
         </div>
         <div class="col-md-12">
           <label for="inputZip" class="form-label">Descrição do problema</label>
-          <textarea class="form-control" id="inputDescProblema" rows="3" cols="12"
-            readonly placeholder="Não consigo conectar à rede da PMST. Como é notebook, em casa consigo acessar, mas aqui não. A senha daqui está correta no pc também."></textarea>
+          <textarea class="form-control" id="inputDescProblema" rows="2" cols="12"
+            readonly placeholder="O pc está dando tela azul quando liga"></textarea>
         </div>
         <div class="col-md-12">
           <label for="conversaPrevia" class="form-label">Conversa prévia com servidor</label>
-          <textarea class="form-control" id="conversaPrevia" rows="3" cols="12" readonly
-            placeholder="Descreva aqui, se necessário, uma conversa anterior à abertura de chamado para entender melhor o problema."></textarea>
+          <textarea class="form-control" id="conversaPrevia" rows="2" cols="12" readonly
+            placeholder="Conversei com fulano e ele disse que quando liga, passa um tempo e a tela fica azul."></textarea>
         </div>
         <div class="col-md-12">
           <label for="inputZip" class="form-label">Possível Solução</label>
-          <textarea class="form-control" id="inputDescProblema" rows="3" cols="12" readonly
-            placeholder="Descreva aqui em poucas palavras uma possível resolução"></textarea>
+          <textarea class="form-control" id="inputDescProblema" rows="2" cols="12" readonly
+            placeholder="Faz uma limpeza primeiro. Se não funcionar, formata."></textarea>
         </div>
         <!-- HOME DASHBOARD para resumo para Ari-->
         <!-- TODO: SELECT COM SOLUÇÃO PARA PUXAR O VALOR DO SERVIÇO OU TROCA DE PEÇAS OU AMBOS. -->
         <!-- TODO: descrever solução e peças utilizadas. -->
+        <div class="col-md-3">
+          <label for="inputZip" class="form-label">Serviços</label>
+          <select id="inputProblema" class="form-select multiselect">
+            <option selected></option>
+            <option>Formatação</option>
+            <option>Limpeza</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+          <label for="inputZip" class="form-label">Peças</label>
+          <select id="inputProblema" class="form-select multiselect">
+            <option selected></option>
+            <option>Memória</option>
+            <option>Fonte</option>
+            <option>Teclado</option>
+            <option>Mouse</option>
+            <option>Cabos</option>
+            <option>HDD</option>
+            <option>Pilha da placa</option>
+            </select>
+        </div>
         <div class="col-md-12">
           <label for="inputZip" class="form-label">Observação da ocorrência</label>
-          <textarea class="form-control" id="inputDescProblema" rows="3" cols="12"
+          <textarea class="form-control" id="inputDescProblema" rows="2" cols="12"
             placeholder="Resetei todas as conexões de rede e não resolveu. Desinstalei o drive de rede e instalei novamente. Dessa vez deu certo."></textarea>
         </div>
     
         <div class="col-12" id="botoesChamado">
           <button type="submit" id="botaoChamado" class="btn btn-primary">Fechar OS</button>
-          <button type="reset" class="btn btn-secondary">Falha na solução</button> <!-- modal para observação de devolução da OS-->
-          <button type="reset" class="btn btn-secondary">Cancelar</button>
+          <button type="reset" id="botaoChamado" class="btn btn-secondary">Falha na solução</button> <!-- modal para observação de devolução da OS-->
+          <button type="reset" id="botaoChamado" class="btn btn-secondary">Cancelar</button>
         </div>
       </form>
     </div>
